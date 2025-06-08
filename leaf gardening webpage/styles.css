@@ -1,0 +1,265 @@
+/* Base Styles */
+body {
+    background-color: #d4edda; /* Light green background */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('flower-background1.png'), url('flower-background2.png');
+    background-size: cover;
+    background-position: center;
+    /* Remove opacity on body - better for text clarity */
+}
+
+.container {
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    color: #2c3e50; /* Darker text color for all container text */
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #1a252f; /* Darker heading */
+}
+
+/* Hero Banner */
+.hero-banner {
+    background: rgba(42, 107, 42, 0.85);
+    color: #d4edda;
+    padding: 40px 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    animation: fadeIn 3s ease-in-out;
+    text-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+/* Services, About, Connect, Footer Sections */
+.services, .about, .connect, .footer {
+    margin: 20px 0;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    text-align: center;
+    color: #2c3e50; /* Dark text */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 600px;
+    color: #2c3e50; /* Darker list text */
+}
+
+ul li {
+    margin: 8px 0;
+    cursor: pointer;
+}
+
+/* Connect links with colors */
+.instagram-text {
+    color: #E1306C; /* Instagram pink */
+    font-weight: bold;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.instagram-text:hover {
+    text-decoration: underline;
+}
+
+.facebook-text {
+    color: #1877F2; /* Facebook blue */
+    font-weight: bold;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.facebook-text:hover {
+    text-decoration: underline;
+}
+
+/* Video cards section */
+.video-links {
+    margin: 30px 0;
+    color: #2c3e50;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.flower-card {
+    width: 180px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    background: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+.flower-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.flower-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+}
+
+.card-text {
+    padding: 10px 5px;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+/* Footer Section - popup links */
+.footer ul li {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.footer ul li:hover {
+    text-decoration: underline;
+}
+
+/* WhatsApp button */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+}
+
+.whatsapp-button img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Popup styles */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0; width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-content {
+    background: #fff;
+    border-radius: 12px;
+    max-width: 450px;
+    width: 90%;
+    padding: 25px;
+    color: #2c3e50;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+.popup-close {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #2c3e50;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-15px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.watch-plants {
+  margin: 40px 0;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  text-align: center;
+  color: #2c3e50;
+}
+
+.flower-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.flower-card {
+  background: #e8f5e9;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-decoration: none;
+  color: #2c3e50;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.flower-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.flower-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card-text {
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366; /* WhatsApp green */
+    color: white;
+    font-weight: bold;
+    padding: 12px 18px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+}
+
+.whatsapp-button:hover {
+    background-color: #1ebe57; /* slightly darker on hover */
+    color: white;
+    text-decoration: none;
+}
